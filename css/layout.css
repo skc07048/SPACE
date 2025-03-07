@@ -354,14 +354,16 @@ section {
   border: 1px solid var(--default-blk);
   color: var(--default-blk);
 }
-.more > i {
+.more > img {
   display: block;
-  width: fit-content;
-  height: fit-content;
+  width: 28px;
+  height: 28px;
   transition: transform 0.5s;
+  filter: invert(1);
 }
-.more:hover > i {
+.more:hover > img {
   transform: rotate(360deg);
+  filter: invert(0);
 }
 .right_con {
   width: 70%;
@@ -492,6 +494,9 @@ section {
 .card > .text_wrap .more:hover {
   color: var(--sub-color);
   border: 1px solid var(--sub-color);
+}
+.card > .text_wrap .more:hover > img {
+  filter: invert(1);
 }
 /* 롤링텍스트 */
 .rolling {
